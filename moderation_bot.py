@@ -6,7 +6,7 @@ Features:
   - Warn -> Mute -> Ban escalation (3 warnings limit)
   - Admin commands: /warn, /mute, /unmute, /ban, /unban, /kick, /warnings, /clearwarn, /rules
 """
-
+import asyncio
 import os
 import re
 import sqlite3
@@ -355,5 +355,5 @@ def main():
     app.run_polling(allowed_updates=Update.ALL_TYPES)
 
 
-if __name__ == "__main__":
+if __name__ == "__asyncio.run(main)__":
     main()
